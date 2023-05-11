@@ -1,17 +1,24 @@
 # Airbnb API
+## Instruction
+### Start Project
+```bash
+git clone https://github.com/yjinjo/airbnb-app --branch blueprint --single-branch [Your Directory]
+```
 
-REST & GraphQL API of the Airbnb Clone using Django REST Framework and Graphene GraphQL
+```bash
+poetry install
+```
 
-### API Actions
+Make .env file and put `SETTINGS_SECRET_KEY` in there. 
 
-- [ ] List Rooms
-- [ ] Filter Rooms
-- [ ] Search By Coords
-- [ ] Login
-- [ ] Create Account
-- [ ] See Room
-- [ ] Add Room to Favourites
-- [ ] See Favs
-- [ ] See Profile
-- [ ] Edit Profile
-# airbnb-app
+For example, 
+```bash
+SETTINGS_SERECT_KEY="adsfklqnwlkgwiperwn23iu89234njk" 
+```
+
+```bash
+python manage.py mega_seed
+```
+This command creates 20 random users, 150 rooms, and 31 photos in uploads/room_photos. 
+You can check in core/management/commands/mega_seed.py
+

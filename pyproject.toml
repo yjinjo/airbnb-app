@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "airbnb-app"
+version = "0.1.0"
+description = ""
+authors = ["yjinjo <yjinjo@berkeley.edu>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.2.1"
+Pillow = "^9.5.0"
+django-seed = "^0.3.1"
+python-dotenv = "1.0"
+psycopg2 = "^2.9.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
