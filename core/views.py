@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.core import serializers
 
-# Create your views here.
+from django.http import HttpResponse
+
+from rooms.models import Room
+
+
+def list_rooms(request):
+    data = serializers.serialize("json", Room.objects.all())
+
+    response = HttpResponse(content=data)
+    return response
