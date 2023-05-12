@@ -1,18 +1,12 @@
 from rest_framework import serializers
 
 from rooms.models import Room
-from users.serializers import TinyUserSerializer
+from users.serializers import UserSerializer
 
 
 class RoomSerializer(serializers.ModelSerializer):
-    user = TinyUserSerializer()
+    user = UserSerializer()
 
     class Meta:
         model = Room
-        fields = ("pk", "name", "price", "instant_book", "user")
-
-
-class BigRoomSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Room
-        fields = "__all__"
+        exclude = ("modified",)

@@ -1,4 +1,5 @@
 from django.db import models
+
 from core.models import CoreModel
 
 
@@ -26,6 +27,9 @@ class Room(CoreModel):
         return self.photos.count()
 
     photo_number.short_description = "Photo Count"
+
+    class Meta:
+        ordering = ["pk"]
 
 
 class Photo(CoreModel):
