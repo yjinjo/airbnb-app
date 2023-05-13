@@ -83,7 +83,7 @@ def login(request):
     user = authenticate(username=username, password=password)
     if user:
         encoded_jwt = jwt.encode(
-            {"id": user.pk},
+            {"pk": user.pk},
             settings.SECRET_KEY,
             algorithm="HS256",
         )
